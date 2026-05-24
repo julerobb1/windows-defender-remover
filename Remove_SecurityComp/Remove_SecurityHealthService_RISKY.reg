@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; ⚠️  RISKY - Remove Windows Security Health Service Entry
+; 
+; THIS FILE IS EXPERIMENTAL AND RISKY - USE WITH CAUTION
+; 
+; What this removes:
+; - Completely deletes the SecurityHealthService registry entry
+; - Removes all associated service configurations
+; - May cause system instability or unexpected behavior
+; 
+; Why it's risky:
+; - Does not gracefully disable the service, completely removes it
+; - May interfere with Windows Update or system stability
+; - Cannot be easily reversed without system restore
+; 
+; Safer alternative:
+; Use Remove_SecurityComp.reg which disables the service instead of removing it
+; 
+; ⚠️  PROCEED ONLY IF YOU KNOW WHAT YOU'RE DOING ⚠️
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService]
